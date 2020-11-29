@@ -1,19 +1,24 @@
 // Dependencies
-var express = require('express');
-var http = require('http');
+
 var path = require('path');
+var http = require('http');
+var express = require('express');
 var socketIO = require('socket.io');
 
+//Initialise dependencies
 var app = express();
 var server = http.Server(app);
 var io = socketIO(server);
 
+
+
+
 app.set('port', 5000);
-app.use('/static', express.static(__dirname + '/static'));
+app.use(express.static(__dirname + '/public'));
 
 // Routing
 app.get('/', function(request, response) {
-    response.sendFile(path.join(__dirname, 'index.html'));
+    response.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
 // Starts the server.
@@ -29,4 +34,3 @@ io.on('connection', function(socket) {
 setInterval(function() {
     io.sockets.emit('message', 'hi!');
 }, 1000);
-

@@ -2,9 +2,10 @@
   "name": "party",
   "version": "0.1.0",
   "description": "Alpha party game",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,6 @@
   "homepage": "https://github.com/Semicolin5/party#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "socket.io": "^3.0.1"
+    "socket.io": "^3.0.3"
   }
 }
