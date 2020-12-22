@@ -1,17 +1,15 @@
 <html>
   <head>
     <title>A Multiplayer Game</title>
-    <style>
-      canvas {
-        width: 800px;
-        height: 600px;
-        border: 5px solid black;
-      }
-    </style>
+    <style href="static/style.css"></style>
     <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   </head>
   <body>
     <canvas id="canvas"></canvas>
+    <div id="mapid"></div>
+
   </body>
   <script src="/static/game.js"></script>
 </html>
