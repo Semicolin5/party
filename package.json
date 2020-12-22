@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Semicolin5/party#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "socket.io": "^3.0.3"
+    "leaflet": "^1.7.1",
+    "socket.io": "^3.0.1"
   }
 }
